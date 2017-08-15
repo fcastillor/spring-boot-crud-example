@@ -22,4 +22,6 @@ public interface UserService {
 	List<User> findAllUsers();
 
 	boolean isUserExist(User user);
+	
+	List<User> findByAge(Integer edad);
 }

@@ -21,6 +21,10 @@ public class UserServiceImpl implements UserService{
 		return userRepository.findOne(id);
 	}
 
+	public List<User> findByAge(Integer edad) {
+		return userRepository.findByAge(edad);
+	}
+
 	public User findByName(String name) {
 		return userRepository.findByName(name);
 	}

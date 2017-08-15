@@ -23,6 +23,7 @@ angular.module('crudApp').factory('UserService',
                         function (response) {
                             console.log('Fetched successfully all users');
                             $localStorage.users = response.data;
+                            
                             deferred.resolve(response);
                         },
                         function (errResponse) {
@@ -32,11 +33,13 @@ angular.module('crudApp').factory('UserService',
                     );
                 return deferred.promise;
             }
+           
 
             function getAllUsers(){
+            
                 return $localStorage.users;
             }
-
+            
             function getUser(id) {
                 console.log('Fetching User with id :'+id);
                 var deferred = $q.defer();
@@ -61,6 +64,7 @@ angular.module('crudApp').factory('UserService',
                     .then(
                         function (response) {
                             loadAllUsers();
+                            
                             deferred.resolve(response.data);
                         },
                         function (errResponse) {

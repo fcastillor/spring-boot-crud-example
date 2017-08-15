@@ -5,8 +5,10 @@ angular.module('crudApp').controller('UserController',
 
         var self = this;
         self.user = {};
+        
         self.users=[];
-
+        
+        
         self.submit = submit;
         self.getAllUsers = getAllUsers;
         self.createUser = createUser;
@@ -15,8 +17,8 @@ angular.module('crudApp').controller('UserController',
         self.editUser = editUser;
         self.reset = reset;
 
-        self.successMessage = '';
-        self.errorMessage = '';
+        self.successMessage = 'Ok';
+        self.errorMessage = 'No problem';
         self.done = false;
 
         self.onlyIntegers = /^\d+$/;
@@ -89,8 +91,10 @@ angular.module('crudApp').controller('UserController',
 
 
         function getAllUsers(){
-            return UserService.getAllUsers();
+        	
+        	return UserService.getAllUsers();
         }
+
 
         function editUser(id) {
             self.successMessage='';

@@ -120,4 +120,15 @@ public class RestApiController {
 		return new ResponseEntity<User>(HttpStatus.NO_CONTENT);
 	}
 
+	// ------------------- Update a User ------------------------------------------------
+
+	@RequestMapping(value = "/user/age/{edad}", method = RequestMethod.GET)
+	public ResponseEntity<?> findUsersByAge(@PathVariable("edad") int edad) {
+		logger.info("Find Users with edad {}", edad);
+
+		List<User> listaUsuarios = userService.findByAge(edad);
+
+		return new ResponseEntity<List<User>>(listaUsuarios, HttpStatus.OK);
+	}
+	
 }

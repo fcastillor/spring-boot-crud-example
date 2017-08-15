@@ -47,7 +47,7 @@
     </div>
     <div class="panel panel-default">
         <!-- Default panel contents -->
-        <div class="panel-heading"><span class="lead">List of Users </span></div>
+        <div class="panel-heading"><span class="lead">List of Users</span></div>
 		<div class="panel-body">
 			<div class="table-responsive">
 		        <table class="table table-hover">
@@ -70,9 +70,13 @@
 		                <td><button type="button" ng-click="ctrl.editUser(u.id)" class="btn btn-success custom-width">Edit</button></td>
 		                <td><button type="button" ng-click="ctrl.removeUser(u.id)" class="btn btn-danger custom-width">Remove</button></td>
 		            </tr>
+		            
 		            </tbody>
-		        </table>		
-			</div>
-		</div>
+		        </table>	
+		        	
+			</div>    
+		
+        
+		
     </div>
 </div>
